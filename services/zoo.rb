@@ -27,9 +27,12 @@ class Zoo
     when 3..6
       "For now there are only #{@animals.count} #{animals_plural} here! " +
         sorted_animals.map(&:representation).join(', ') + '. Hope you will enjoy your visit!'
-    else
+    when 7..9
       "There are #{@animals.count} #{animals_plural} in our ZOO! " +
         sorted_animals.map(&:representation).join(', ') + '. Hope you will enjoy your visit!'
+    else
+      "Yayy! We have #{@animals.count} residents now! " +
+        sorted_animals.map(&:representation).join(', ') + '. You need to visit us as soon as possible!'
     end
   end
 
