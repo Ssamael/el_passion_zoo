@@ -7,6 +7,6 @@ class Gorilla < Animal
   end
   
   def representation
-    "#{self.class.name} #{@name} from #{@origin} #{@description.downcase}"
+    "#{self.class.name} #{@name} from #{@origin} #{description_for_representation}"
   end
 end

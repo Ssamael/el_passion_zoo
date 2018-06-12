@@ -7,6 +7,12 @@ class Animal
   end
   
   def representation
-    "#{self.class.name} #{name} #{@description.downcase}"
+    "#{self.class.name} #{name} #{description_for_representation}"
+  end
+  
+  private
+  
+  def description_for_representation
+    @description[0].downcase + @description[1..-1]
   end
 end
