@@ -1,6 +1,6 @@
 class Gorilla < Animal
-  def initialize(name, description, orgin)
-    super(name, description)
-    @orgin = orgin
+  def initialize(name:, description:, origin:)
+    super(name: name, description: description)
+    @origin = origin
   end
 end
