@@ -21,7 +21,7 @@ class Zoo
       'There is only one animal in our ZOO! ' +
         @animals.first.representation + '. Hope you will enjoy your visit!'
     else
-      'For now there are only 2 animals here! ' +
+      "For now there are only 2 #{animals_plural} here! " +
         sorted_animals.map(&:representation).join(' and ') + '. Hope you will enjoy your visit!'
     end
   end
@@ -30,5 +30,13 @@ class Zoo
 
   def sorted_animals
     @animals.sort_by(&:name)
+  end
+
+  def animals_plural
+    if @animals.map(&:class).uniq.count == 1
+      @animals.first.class.name.downcase + 's'
+    else
+      'animals'
+    end
   end
 end
