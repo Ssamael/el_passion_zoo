@@ -6,7 +6,19 @@ require_relative '../models/penguin'
 require_relative '../models/lemur'
 
 class Zoo
+  def initialize
+    @animals = []
+  end
+  
+  def add_animals(animals)
+    @animals += animals
+  end
+  
   def inventory
-    'Oh no! There are no animals in our ZOO!'
+    if @animals.count == 0
+      'Oh no! There are no animals in our ZOO!'
+    else
+      'There is only one animal in our ZOO! Alligator Roger likes to swim in the sewer. Hope you will enjoy your visit!'
+    end
   end
 end
