@@ -7,6 +7,6 @@ require_relative '../models/lemur'
 
 class Zoo
   def inventory
-
+    'Oh no! There are no animals in our ZOO!'
   end
 end
