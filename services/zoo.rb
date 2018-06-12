@@ -15,14 +15,18 @@ class Zoo
   end
 
   def inventory
-    if @animals.count == 0
+    case @animals.count
+    when 0
       'Oh no! There are no animals in our ZOO!'
-    elsif @animals.count == 1
+    when 1
       'There is only one animal in our ZOO! ' +
         @animals.first.representation + '. Hope you will enjoy your visit!'
-    else
+    when 2
       "For now there are only 2 #{animals_plural} here! " +
         sorted_animals.map(&:representation).join(' and ') + '. Hope you will enjoy your visit!'
+    else
+      "For now there are only #{@animals.count} #{animals_plural} here! " +
+        sorted_animals.map(&:representation).join(', ') + '. Hope you will enjoy your visit!'
     end
   end
 
