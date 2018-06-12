@@ -18,7 +18,8 @@ class Zoo
     if @animals.count == 0
       'Oh no! There are no animals in our ZOO!'
     else
-      'There is only one animal in our ZOO! Alligator Roger likes to swim in the sewer. Hope you will enjoy your visit!'
+      'There is only one animal in our ZOO! ' +
+        @animals.first.representation + '. Hope you will enjoy your visit!'
     end
   end
 end
